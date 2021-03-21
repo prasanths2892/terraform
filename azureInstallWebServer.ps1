@@ -3,7 +3,7 @@
 Install-WindowsFeature -name Web-Server
 
 #Query Azure Instance Metadata service
-$metadata = Invoke-RestMethod -Headers @{"Metadata"="true"} -URI http://169.254.169.254/metadata/instance?api-version=2017-08-01 -Method get
+$metadata = Invoke-RestMethod -Headers @{"Metadata"="true"} -URI http://169.254.169.254/metadata/instance?api-version=2020-09-01 -Method get
 
 #Create object containing data to render 
 $body = New-Object System.Collections.ArrayList
